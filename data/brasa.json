@@ -1,0 +1,15 @@
+{
+  "exemplo": true,
+  "atualizado": "",
+  "aviso": "Lista inicial de exemplo. Edite este arquivo ou ligue a planilha do Google (veja o README).",
+  "espetos": [
+    { "nome": "Carne (alcatra)",            "status": "na-brasa",   "preco": "" },
+    { "nome": "Frango",                     "status": "disponivel", "preco": "" },
+    { "nome": "Linguiça toscana",           "status": "na-brasa",   "preco": "" },
+    { "nome": "Coração de frango",          "status": "disponivel", "preco": "" },
+    { "nome": "Queijo coalho",              "status": "disponivel", "preco": "" },
+    { "nome": "Kafta",                      "status": "esgotado",   "preco": "" },
+    { "nome": "Medalhão de frango com bacon","status": "disponivel", "preco": "" },
+    { "nome": "Pão de alho",                "status": "na-brasa",   "preco": "" }
+  ]
+}
