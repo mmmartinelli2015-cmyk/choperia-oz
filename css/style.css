@@ -1,0 +1,202 @@
+/* Choperia e Espetaria Oz · cores e fontes nas variáveis abaixo */
+:root {
+  --carvao: #10110b;
+  --preto: #1a1b16;
+  --madeira: #45372e;
+  --madeira-esc: #2a211b;
+  --ouro: #a57835;
+  --ouro-claro: #d2a861;
+  --creme: #f1e6d0;
+  --creme-2: #c9bba0;
+  --brasa: #e2622a;
+  --verde: #6fae4f;
+  --cinza: #6d665b;
+  --zap: #25d366;
+  --display: "Alfa Slab One", "Rockwell", Georgia, serif;
+  --cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --texto: "Barlow", system-ui, sans-serif;
+  --raio: 14px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--carvao); color: var(--creme); font: 400 1.0625rem/1.6 var(--texto); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ouro-claro); }
+h1, h2, h3 { margin: 0; line-height: 1.05; }
+.wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ouro); color: var(--carvao); padding: 8px 14px; z-index: 99; }
+.skip:focus { left: 8px; }
+:focus-visible { outline: 3px solid var(--ouro-claro); outline-offset: 3px; }
+
+/* Botões */
+.btn { white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 20px; border-radius: 999px; font: 700 1rem/1 var(--cond); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: transform .15s, background .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn--ouro { background: var(--ouro); color: var(--carvao); }
+.btn--ouro:hover { background: var(--ouro-claro); }
+.btn--linha { border-color: var(--ouro); color: var(--creme); }
+.btn--linha:hover { background: rgba(165,120,53,.18); }
+.btn--grande { padding: 15px 26px; font-size: 1.1rem; }
+.btn--zap { background: var(--zap); color: #062b14; }
+.btn--bloco { white-space: normal; width: 100%; padding: 16px; font-size: 1.15rem; }
+
+/* Topo */
+.topo { position: sticky; top: 0; z-index: 50; background: rgba(16,17,11,.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(165,120,53,.35); }
+.topo__in { display: flex; align-items: center; gap: 20px; min-height: 72px; }
+.topo__marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--creme); font: 600 1rem/1.1 var(--cond); text-transform: uppercase; letter-spacing: .08em; }
+.topo__marca img { width: 52px; height: 52px; }
+.topo__marca b { font: 400 1.4rem var(--display); color: var(--ouro-claro); letter-spacing: 0; }
+.nav { display: flex; gap: 20px; margin-left: auto; white-space: nowrap; }
+.nav a { color: var(--creme-2); text-decoration: none; font: 600 1rem var(--cond); text-transform: uppercase; letter-spacing: .06em; }
+.nav a:hover { color: var(--ouro-claro); }
+.nav-toggle { display: none; margin-left: auto; background: none; border: 2px solid var(--ouro); color: var(--creme); border-radius: 8px; padding: 8px 14px; font: 700 .95rem var(--cond); text-transform: uppercase; letter-spacing: .06em; }
+
+/* Abertura */
+.hero { position: relative; background: linear-gradient(90deg, rgba(16,17,11,.97) 0%, rgba(16,17,11,.88) 50%, rgba(16,17,11,.55) 100%), url("../img/logo-madeira.jpg") center/cover; overflow: hidden; }
+.hero__in { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 88px 0 96px; }
+.selo-txt { margin: 0 0 14px; color: var(--ouro-claro); font: 700 1rem var(--cond); letter-spacing: .3em; text-transform: uppercase; }
+.hero h1 { font: 400 clamp(2.6rem, 6.4vw, 5rem)/1 var(--display); }
+.hero h1 span { color: var(--brasa); }
+.hero__lead { max-width: 34em; margin: 22px 0 30px; color: var(--creme-2); font-size: 1.15rem; }
+.hero__acoes { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero__logo img { width: min(380px, 100%); margin-inline: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); }
+
+.faixa { display: flex; width: max-content; gap: 22px; padding: 14px 0; background: var(--ouro); color: var(--carvao); font: 700 1.15rem var(--cond); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; animation: rolar 34s linear infinite; }
+.faixa i { font-style: normal; }
+@keyframes rolar { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .faixa { animation: none; } html { scroll-behavior: auto; } }
+
+/* Seções */
+.secao { padding: 96px 0; }
+.cab { max-width: 680px; margin-bottom: 44px; }
+.cab h2, .delivery h2, .contato h2 { font: 400 clamp(2rem, 4.4vw, 3.1rem) var(--display); color: var(--creme); }
+.cab p:last-child { color: var(--creme-2); margin: 14px 0 0; }
+.rotulo { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; color: var(--ouro-claro); font: 700 .95rem var(--cond); letter-spacing: .25em; text-transform: uppercase; }
+.ao-vivo { width: 10px; height: 10px; border-radius: 50%; background: var(--brasa); box-shadow: 0 0 0 0 rgba(226,98,42,.7); animation: pulso 1.8s infinite; }
+@keyframes pulso { 70% { box-shadow: 0 0 0 12px rgba(226,98,42,0); } 100% { box-shadow: 0 0 0 0 rgba(226,98,42,0); } }
+
+/* Na brasa agora: quadro-negro */
+.brasa { background: radial-gradient(ellipse at 50% 120%, rgba(226,98,42,.22), transparent 60%), var(--preto); }
+.quadro { background: #1d211d; border: 10px solid var(--madeira); border-radius: 10px; box-shadow: inset 0 0 60px rgba(0,0,0,.6), 0 20px 50px rgba(0,0,0,.45); padding: 28px clamp(18px, 4vw, 40px); }
+.quadro__topo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; border-bottom: 2px dashed rgba(241,230,208,.25); padding-bottom: 14px; margin-bottom: 8px; }
+.quadro__titulo { font: 400 1.6rem var(--display); color: var(--ouro-claro); }
+.quadro__hora { font: 600 1rem var(--cond); color: var(--creme-2); letter-spacing: .05em; }
+.quadro__aviso { margin: 10px 0 4px; padding: 8px 12px; border-radius: 8px; background: rgba(165,120,53,.18); color: var(--ouro-claro); font-size: .95rem; }
+.quadro__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 40px; }
+.item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid rgba(241,230,208,.1); }
+.item__nome { flex: 1; font: 600 1.3rem var(--cond); letter-spacing: .02em; }
+.item__preco { font: 700 1.15rem var(--cond); color: var(--ouro-claro); }
+.item__status { font: 700 .8rem var(--cond); text-transform: uppercase; letter-spacing: .12em; padding: 4px 10px; border-radius: 999px; }
+.item--na-brasa .item__status { background: var(--brasa); color: #fff; }
+.item--disponivel .item__status { background: rgba(111,174,79,.2); color: #a8dc8c; }
+.item--esgotado { opacity: .5; }
+.item--esgotado .item__nome { text-decoration: line-through; }
+.item--esgotado .item__status { background: rgba(255,255,255,.08); color: var(--creme-2); }
+.quadro__vazio { grid-column: 1 / -1; padding: 24px 0; color: var(--creme-2); }
+.st { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex: none; }
+.st--na-brasa { background: var(--brasa); box-shadow: 0 0 10px var(--brasa); }
+.st--disponivel { background: var(--verde); }
+.st--esgotado { background: var(--cinza); }
+.quadro__legenda { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 18px; color: var(--creme-2); font-size: .92rem; }
+.quadro__legenda span { display: inline-flex; align-items: center; gap: 8px; }
+
+/* Bebidas */
+.bebidas { background: var(--carvao); }
+.bebidas__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.bebida { position: relative; overflow: hidden; padding: 26px 24px 28px; border-radius: var(--raio); background: linear-gradient(160deg, #24221b, #17170f); border: 1px solid rgba(165,120,53,.3); }
+.bebida__tipo { margin: 0 0 8px; color: var(--ouro-claro); font: 700 .85rem var(--cond); letter-spacing: .2em; text-transform: uppercase; }
+.bebida h3 { font: 400 2rem var(--display); }
+.bebida p:last-of-type { margin: 10px 0 0; color: var(--creme-2); max-width: 22em; }
+.bebida--chope { background: linear-gradient(160deg, #3a2a12, #1a140b); border-color: var(--ouro); padding-right: 96px; }
+.tulipa { position: absolute; right: 22px; bottom: 18px; width: 52px; height: 86px; border-radius: 6px 6px 18px 18px; background: linear-gradient(#f6eedc 0 22%, #e3a63a 22% 100%); opacity: .9; clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%); }
+.bebida--taca { border-style: dashed; }
+.nota { margin: 26px 0 0; color: var(--cinza); font-size: .9rem; }
+
+/* Ambientes */
+.ambientes { background: var(--madeira-esc); }
+.amb { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+.amb + .amb { margin-top: 64px; }
+.amb--inv .amb__foto { order: 2; }
+.amb__foto { margin: 0; border-radius: var(--raio); overflow: hidden; border: 3px solid var(--ouro); box-shadow: 0 24px 50px rgba(0,0,0,.45); }
+.amb__foto img { width: 100%; height: 440px; object-fit: cover; }
+.amb__n { margin: 0 0 6px; color: var(--ouro-claro); font: 700 .95rem var(--cond); letter-spacing: .25em; text-transform: uppercase; }
+.amb h3 { font: 400 clamp(1.8rem, 3.6vw, 2.6rem) var(--display); }
+.amb__txt > p:not(.amb__n) { color: var(--creme-2); margin: 16px 0; }
+.amb__itens { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.amb__itens li { padding: 6px 14px; border-radius: 999px; background: rgba(165,120,53,.18); color: var(--creme); font: 600 .95rem var(--cond); letter-spacing: .04em; }
+
+/* Delivery */
+.delivery { background: linear-gradient(180deg, var(--preto), var(--carvao)); }
+.delivery__in { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+.delivery__intro > p { color: var(--creme-2); }
+.porcoes { margin-top: 26px; padding: 22px 24px; border-radius: var(--raio); border: 1px solid rgba(165,120,53,.35); background: rgba(69,55,46,.35); }
+.porcoes h3 { font: 400 1.5rem var(--display); color: var(--ouro-claro); margin-bottom: 8px; }
+.porcoes ul { margin: 0; padding-left: 20px; font: 600 1.2rem var(--cond); }
+.pedido { background: #1d1c16; border: 1px solid rgba(165,120,53,.4); border-radius: var(--raio); padding: 26px; }
+.pedido fieldset { border: 0; padding: 0; margin: 0 0 20px; }
+.pedido legend { font: 400 1.3rem var(--display); color: var(--ouro-claro); margin-bottom: 8px; }
+.it { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid rgba(241,230,208,.08); }
+.it__nome { font: 600 1.1rem var(--cond); }
+.it__q { display: flex; align-items: center; gap: 4px; }
+.it__q button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--ouro); background: transparent; color: var(--creme); font-size: 1.2rem; cursor: pointer; }
+.it__q button:hover { background: var(--ouro); color: var(--carvao); }
+.it__q output { min-width: 28px; text-align: center; font: 700 1.1rem var(--cond); }
+.it__vazio { color: var(--creme-2); margin: 0; }
+.campos { display: grid; gap: 12px; margin-bottom: 16px; }
+.campo span { display: block; margin-bottom: 4px; font: 600 .95rem var(--cond); letter-spacing: .05em; text-transform: uppercase; color: var(--creme-2); }
+.campo input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(241,230,208,.2); background: var(--carvao); color: var(--creme); font: inherit; }
+.campo input:focus { border-color: var(--ouro); outline: none; }
+.pedido__resumo { margin-bottom: 14px; padding: 12px 14px; border-radius: 10px; background: rgba(165,120,53,.14); font: 600 1.05rem var(--cond); }
+.pedido__msg { margin: 12px 0 0; color: var(--ouro-claro); }
+
+/* Contato */
+.contato { background: var(--madeira-esc); }
+.contato__in { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.info { margin: 24px 0 0; display: grid; gap: 14px; }
+.info div { display: grid; grid-template-columns: 120px 1fr; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid rgba(241,230,208,.12); }
+.info dt { color: var(--ouro-claro); font: 700 .95rem var(--cond); letter-spacing: .15em; text-transform: uppercase; }
+.info dd { margin: 0; }
+.falta { color: var(--creme-2); font-style: italic; }
+.contato__logo { border-radius: var(--raio); border: 3px solid var(--ouro); }
+
+/* Rodapé */
+.rodape { padding: 28px 0 90px; background: #090905; color: var(--cinza); font-size: .9rem; }
+.rodape__in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.rodape p { margin: 0; }
+
+.zap-flutuante { position: fixed; right: 16px; bottom: 16px; z-index: 40; padding: 14px 22px; border-radius: 999px; background: var(--zap); color: #062b14; font: 700 1rem var(--cond); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; box-shadow: 0 10px 24px rgba(0,0,0,.45); }
+
+/* Responsivo */
+@media (max-width: 1180px) {
+  .topo__cta { display: none; }
+  .nav-toggle { display: block; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--carvao); border-bottom: 1px solid rgba(165,120,53,.35); padding: 8px 16px 16px; }
+  .nav.aberto { display: flex; }
+  .nav a { padding: 12px 0; border-bottom: 1px solid rgba(241,230,208,.08); }
+}
+@media (max-width: 980px) {
+  .topo__cta { display: none; }
+  .nav-toggle { display: block; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--carvao); border-bottom: 1px solid rgba(165,120,53,.35); padding: 8px 16px 16px; }
+  .nav.aberto { display: flex; }
+  .nav a { padding: 12px 0; border-bottom: 1px solid rgba(241,230,208,.08); }
+  .hero__in, .amb, .delivery__in, .contato__in { grid-template-columns: minmax(0, 1fr); }
+  .hero__logo { order: -1; }
+  .hero__logo img { width: 200px; }
+  .hero__in { padding: 48px 0 64px; gap: 24px; }
+  .amb--inv .amb__foto { order: 0; }
+  .amb__foto img { height: 320px; }
+  .bebidas__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .btn--grande { white-space: normal; text-align: center; }
+  .secao { padding: 68px 0; }
+  .topo__marca span { font-size: .85rem; }
+  .topo__marca img { width: 44px; height: 44px; }
+  .quadro { border-width: 7px; }
+  .quadro__lista { grid-template-columns: 1fr; }
+  .item__nome { font-size: 1.15rem; }
+  .bebidas__grid { grid-template-columns: 1fr; }
+  .pedido { padding: 20px 16px; }
+  .info div { grid-template-columns: 1fr; gap: 2px; }
+}
