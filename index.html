@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choperia e Espetaria Oz · Osasco</title>
+  <meta name="description" content="Choperia e Espetaria Oz em Osasco (SP): chope Heineken e Petra, cerveja de garrafa, drinks na taça, espetos na brasa e porções. Delivery de espetos pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Choperia e Espetaria Oz · Osasco">
+  <meta property="og:description" content="Chope gelado, espeto na brasa e delivery de espetos em Osasco.">
+  <meta property="og:image" content="img/logo-madeira.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Choperia e Espetaria Oz",
+    "servesCuisine": ["Espetinhos", "Churrasco", "Porções"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Osasco", "addressRegion": "SP", "addressCountry": "BR" },
+    "image": "img/logo-madeira.jpg"
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ TOPO ============ -->
+<header class="topo">
+  <div class="wrap topo__in">
+    <a class="topo__marca" href="#inicio" aria-label="Choperia e Espetaria Oz, início">
+      <img src="img/logo-oz.png" alt="Logo Choperia e Espetaria Oz" width="64" height="64">
+      <span>Choperia &amp; Espetaria <b>Oz</b></span>
+    </a>
+    <nav id="menu" class="nav" aria-label="Navegação principal">
+      <a href="#brasa">Na brasa agora</a>
+      <a href="#bebidas">Chopes &amp; drinks</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn--ouro topo__cta" href="#delivery">Pedir espetos</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ ABERTURA ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__in">
+    <div class="hero__texto">
+      <p class="selo-txt">Osasco · SP</p>
+      <h1>Chope gelado<br>e espeto <span>na brasa.</span></h1>
+      <p class="hero__lead">Chope Heineken e Petra na pressão, espetinhos assados na hora na churrasqueira e porções para dividir. Venha para a Oz ou peça seus espetos em casa.</p>
+      <div class="hero__acoes">
+        <a class="btn btn--ouro btn--grande" href="#brasa">Ver o que está na brasa</a>
+        <a class="btn btn--linha btn--grande" href="#delivery">Pedir delivery</a>
+      </div>
+    </div>
+    <div class="hero__logo">
+      <img src="img/logo-oz.png" alt="Selo Choperia e Espetaria Oz, Osasco SP" width="400" height="400">
+    </div>
+  </div>
+  <div class="faixa" aria-hidden="true">
+    <span>Chope Heineken</span><i>✦</i><span>Chope Petra</span><i>✦</i><span>Espetos na brasa</span><i>✦</i><span>Drinks na taça</span><i>✦</i><span>Delivery de espetos</span><i>✦</i>
+    <span>Chope Heineken</span><i>✦</i><span>Chope Petra</span><i>✦</i><span>Espetos na brasa</span><i>✦</i><span>Drinks na taça</span><i>✦</i><span>Delivery de espetos</span><i>✦</i>
+  </div>
+</section>
+
+<!-- ============ NA BRASA AGORA ============ -->
+<section class="secao brasa" id="brasa">
+  <div class="wrap">
+    <header class="cab">
+      <p class="rotulo"><span class="ao-vivo" aria-hidden="true"></span> Atualizado pela casa</p>
+      <h2>Na brasa agora</h2>
+      <p>Veja quais espetos estão assando neste momento para comer aqui na Oz. A lista é atualizada pela equipe da churrasqueira.</p>
+    </header>
+
+    <div class="quadro" aria-live="polite">
+      <div class="quadro__topo">
+        <span class="quadro__titulo">Churrasqueira</span>
+        <span class="quadro__hora" id="brasa-hora">Carregando…</span>
+      </div>
+      <p class="quadro__aviso" id="brasa-aviso" hidden></p>
+      <ul class="quadro__lista" id="brasa-lista">
+        <li class="quadro__vazio">Carregando os espetos…</li>
+      </ul>
+      <div class="quadro__legenda">
+        <span><i class="st st--na-brasa"></i> Na brasa: sai em instantes</span>
+        <span><i class="st st--disponivel"></i> Disponível: peça no balcão</span>
+        <span><i class="st st--esgotado"></i> Acabou por hoje</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEBIDAS ============ -->
+<section class="secao bebidas" id="bebidas">
+  <div class="wrap">
+    <header class="cab">
+      <p class="rotulo">Para acompanhar</p>
+      <h2>Chopes, cervejas e drinks</h2>
+    </header>
+
+    <div class="bebidas__grid">
+      <article class="bebida bebida--chope">
+        <p class="bebida__tipo">Chope na pressão</p>
+        <h3>Heineken</h3>
+        <p>Puro malte, tirado na hora e bem gelado.</p>
+        <span class="tulipa" aria-hidden="true"></span>
+      </article>
+      <article class="bebida bebida--chope">
+        <p class="bebida__tipo">Chope na pressão</p>
+        <h3>Petra</h3>
+        <p>Leve e refrescante, para acompanhar o espeto.</p>
+        <span class="tulipa" aria-hidden="true"></span>
+      </article>
+      <article class="bebida">
+        <p class="bebida__tipo">Cerveja de garrafa</p>
+        <h3>Heineken</h3>
+        <p>Trincando, direto do freezer.</p>
+      </article>
+      <article class="bebida">
+        <p class="bebida__tipo">Cerveja de garrafa</p>
+        <h3>Original</h3>
+        <p>Clássica e gelada, para dividir na mesa.</p>
+      </article>
+      <article class="bebida bebida--taca">
+        <p class="bebida__tipo">Drinks na taça</p>
+        <h3>Com álcool</h3>
+        <p>Drinks da casa servidos na taça. Peça a carta no balcão.</p>
+      </article>
+      <article class="bebida bebida--taca">
+        <p class="bebida__tipo">Drinks na taça</p>
+        <h3>Sem álcool</h3>
+        <p>Opções sem álcool, também na taça, para quem vai dirigir.</p>
+      </article>
+    </div>
+    <p class="nota">Venda de bebidas alcoólicas proibida para menores de 18 anos. Se beber, não dirija.</p>
+  </div>
+</section>
+
+<!-- ============ AMBIENTES ============ -->
+<section class="secao ambientes" id="ambientes">
+  <div class="wrap">
+    <header class="cab">
+      <p class="rotulo">Dois ambientes</p>
+      <h2>Escolha onde sentar</h2>
+    </header>
+
+    <div class="amb">
+      <figure class="amb__foto"><img src="img/ambiente-brasa.jpg" alt="Salão com churrasqueira de tijolos, chopeira no balcão de madeira e mesas altas" width="1024" height="765" loading="lazy"></figure>
+      <div class="amb__txt">
+        <p class="amb__n">Ambiente 1</p>
+        <h3>Salão da Brasa</h3>
+        <p>De frente para a churrasqueira e para a chopeira. Mesas de madeira, parede de tijolos e o cardápio no quadro-negro: aqui você vê o espeto saindo da brasa.</p>
+        <ul class="amb__itens"><li>Churrasqueira à vista</li><li>Chopeira no balcão</li><li>Mesas altas de madeira</li></ul>
+      </div>
+    </div>
+
+    <div class="amb amb--inv">
+      <figure class="amb__foto"><img src="img/ambiente-bar.jpg" alt="Salão com geladeiras de bebidas, mesas de madeira, decoração rubro-negra e mesa de sinuca ao fundo" width="765" height="1024" loading="lazy"></figure>
+      <div class="amb__txt">
+        <p class="amb__n">Ambiente 2</p>
+        <h3>Salão do Bar</h3>
+        <p>Geladeiras cheias, decoração de boteco e mesa de sinuca ao fundo. O lugar para juntar a turma, ver o jogo e pedir a próxima rodada.</p>
+        <ul class="amb__itens"><li>Mesa de sinuca</li><li>Cervejas sempre geladas</li><li>Clima de boteco</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY ============ -->
+<section class="secao delivery" id="delivery">
+  <div class="wrap delivery__in">
+    <div class="delivery__intro">
+      <p class="rotulo">Delivery</p>
+      <h2>Espeto na brasa, na sua casa</h2>
+      <p>Monte seu pedido e envie direto para o nosso WhatsApp. Confirmamos o valor, a taxa de entrega e o tempo de preparo na conversa.</p>
+      <div class="porcoes">
+        <h3>Porções</h3>
+        <ul>
+          <li>Salame</li>
+          <li>Salame com azeitona</li>
+          <li>Batata</li>
+          <li>Calabresa</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="pedido" id="pedido" novalidate>
+      <fieldset>
+        <legend>Espetos</legend>
+        <div class="itens" id="itens-espetos"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Porções</legend>
+        <div class="itens" id="itens-porcoes"></div>
+      </fieldset>
+      <div class="campos">
+        <label class="campo"><span>Seu nome</span><input type="text" id="cli-nome" autocomplete="name" required></label>
+        <label class="campo"><span>Endereço de entrega</span><input type="text" id="cli-end" autocomplete="street-address" placeholder="Rua, número, bairro" required></label>
+        <label class="campo"><span>Observações</span><input type="text" id="cli-obs" placeholder="Ex.: sem cebola, troco para R$ 100"></label>
+      </div>
+      <div class="pedido__resumo" id="pedido-resumo">Nenhum item escolhido.</div>
+      <button class="btn btn--zap btn--bloco" type="submit">Enviar pedido pelo WhatsApp</button>
+      <p class="pedido__msg" id="pedido-msg" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="secao contato" id="contato">
+  <div class="wrap contato__in">
+    <div>
+      <h2>Venha para a Oz</h2>
+      <dl class="info">
+        <div><dt>Endereço</dt><dd class="falta">a completar · Osasco, SP</dd></div>
+        <div><dt>Horário</dt><dd class="falta">a completar</dd></div>
+        <div><dt>WhatsApp</dt><dd class="falta">a completar</dd></div>
+        <div><dt>Instagram</dt><dd class="falta">a completar</dd></div>
+      </dl>
+    </div>
+    <img class="contato__logo" src="img/logo-madeira.jpg" alt="Logo da Oz sobre madeira" width="1280" height="698" loading="lazy">
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape__in">
+    <p>© <span id="ano">2026</span> Choperia e Espetaria Oz · Osasco, SP</p>
+    <p>Beba com moderação. Proibida a venda de bebidas alcoólicas para menores de 18 anos.</p>
+  </div>
+</footer>
+
+<a class="zap-flutuante" href="#delivery" aria-label="Fazer pedido de delivery">Pedir</a>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
